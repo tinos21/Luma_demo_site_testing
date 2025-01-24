@@ -31,6 +31,7 @@ def setup(request):
     time.sleep(1)
     driver.maximize_window()
 
+
     # Assign driver and wait to the test class
     request.cls.driver = driver
     request.cls.wait = wait
