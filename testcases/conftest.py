@@ -23,11 +23,10 @@ def setup(request):
     # Initialize WebDriver with the service object and options
     driver = webdriver.Chrome(service=service, options=options)
 
-
     # Explicit wait (set to 60 seconds)
     wait = WebDriverWait(driver, 60)
 
-    # Open eBay
+    # Open magento
     driver.get("https://magento.softwaretestingboard.com/")
     time.sleep(1)
     driver.maximize_window()
@@ -35,10 +34,8 @@ def setup(request):
     # Assign driver and wait to the test class
     request.cls.driver = driver
     request.cls.wait = wait
-
     # Ensure the test completes before closing the driver
     yield
-
     # Cleanup after test
-    time.sleep(1)
+    time.sleep(10)
     driver.quit()  # Quit the driver at the end of the test
