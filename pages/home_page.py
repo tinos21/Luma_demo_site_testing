@@ -21,3 +21,12 @@ class LaunchPage():
          whatsnew.click()
          time.sleep(4)
 
+
+    def Womendropdown(self):
+        women_dropdown_menu = self.wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@id='ui-id-4']")))
+        time.sleep(4)
+        women_dropdown_menu.click()
+
+
+
+
